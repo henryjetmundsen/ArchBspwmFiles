@@ -1,0 +1,123 @@
+/*
+ * ROFI color theme
+ *
+ * Based on Base16 Material Color Scheme (https://github.com/ntpeters/base16-materialtheme-scheme)
+ *
+ * User: Tomaszal
+ * Copyright: Tomas Zaluckij
+ */
+
+* {
+	base00: #2d2a2e;
+	base01: #ff6188;
+	base02: #a9dc76;
+	base03: #ffd866;
+	base04: #fc9867;
+	base05: #ab9df2;
+	base06: #78dce8;
+	base07: #fcfcfa;
+	base08: #727072;
+	base09: #ff6188;
+	base0A: #a9dc76;
+	base0B: #ffd866;
+	base0C: #fc9867;
+	base0D: #ab9df2;
+	base0E: #78dce8;
+	base0F: #fcfcfa;
+
+	/*base0D: #00BCD4;*/
+
+	spacing: 0;
+	background-color: transparent;
+
+	font: "Roboto Mono 13";
+}
+
+window {
+	transparency: "real";
+	/*fullscreen: true;*/
+	background-color: #2d2a2eCC; /*base00 + CC (80% opacity)*/
+}
+
+mainbox {
+	children: [inputbar, message, sidebar, listview];
+	spacing: 30px;
+	/*margin: 20%;*/
+	padding: 30px 0;
+	border: 1px;
+	border-color: @base0D;
+}
+
+inputbar {
+	padding: 0 30px;
+	children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+	text-color: @base0D;
+}
+
+textbox-prompt-colon {
+	expand: false;
+	str: ":";
+	margin: 0 1ch 0 0;
+	text-color: @base0D;
+}
+
+entry {
+	text-color: @base07;
+}
+
+case-indicator {
+	text-color: @base0F;
+}
+
+sidebar, message {
+	border: 1px 0;
+	border-color: @base0D;
+}
+
+button, textbox {
+	background-color: @base03;
+	text-color: @base07;
+	padding: 5px;
+}
+
+button selected {
+	background-color: @base0D;
+}
+
+listview {
+	scrollbar: true;
+	margin: 0 10px 0 30px;
+}
+
+element {
+	padding: 5px;
+	highlight: bold underline;
+}
+
+element normal {
+	background-color: transparent;
+}
+
+element selected {
+	background-color: @base0D;
+}
+
+element alternate {
+	/*background-color: @base03;*/
+}
+
+element normal normal, element selected normal, element alternate normal {
+	text-color: @base07;
+}
+
+element normal urgent, element selected urgent, element alternate urgent {
+	text-color: @base0F;
+}
+
+element normal active, element selected active, element alternate active {
+	text-color: @base0B;
+}
+
